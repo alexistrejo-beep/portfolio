@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes fadeInup {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Variables de color */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3f7;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --success-color: #28a745;
+}
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+
+
+header{
+    background: linear-gradient(to right, #0066ff, #00ccff);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+#titulos{
+    font-size: 1.1rem;
+    font-style: italic;
+    max-width: 700px;
+    width: 60vw;
+    margin: auto;
+   padding: 3em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-weight: 700;
+
+}
+#tituloPrincipal{
+    color: rgb(58, 58, 246);
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+main{
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.subtitulo{
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    border-left: 5px solid #0066ff;
+    padding-left: 1rem;
+}
+main p{
+    font-size: 1.8rem; 
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 2rem;
+}
+h2{ text-align: center;
+    font-size: 2rem;
+    color: #222;
+    position: relative;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInup 1s ease-out both;
+}
+h2::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #00c8ff, #007bff);
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 2px;
+}
+.caja1{
+    width: 85%;
+    margin: auto;
+    margin-top: 1.5em;
+    border: 2px solid rgb(71, 68, 68);
+    border-radius: 10px;
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+gap: 30px;  
+padding: 2em;
+background: linear-gradient(135deg, #d8dce3 0%, #c3cfe2 100%);
+}
+.cajitas{
+    border: 2px solid black;
+    width: 280px;
+    height: auto;
+    background: rgb(217, 201, 201);
+    border-radius: 10px;
+    padding: 25px;
+    gap: 2em;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 1s;
+    
+}
+.cajitas:hover {
+    transform: translate(-10px) scale(1.05);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2),
+                -6px -6px 12px rgba(255, 255, 255, 0.9);
+    background-color: #cbe5f9;
+  }
+.cajitas img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cajitas h4{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos de la sección */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+/* Grid de proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjetas de proyecto */
+.proyecto-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-content {
+    padding: 25px;
+}
+
+.proyecto-title {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.proyecto-desc {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta de contacto especial */
+.contacto-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.contacto-card .proyecto-title,
+.contacto-card .proyecto-desc {
+    color: white;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.proyecto-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Iconos */
+.fas, .fab {
+    margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
